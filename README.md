@@ -1,7 +1,5 @@
-# Bollocks Index
-We've noticed that some courses at our university have a rather high amount of
-bollocks in them, this is a place for us to figure out what that bollocks
-actually means.
+# StealMyStuff
+Every year a special time comes around, thousands of students move into thousands of flats around the country and wayward furniture, technology and the occasional pet is cast out onto the curb. StealMyStuff is dedicated to rehoming these items, users can post a picture, description and map reference of their stuff for others to browse and, if they like what they see, come and steal it. 
 
 ## Hacking
 Models go in the models module. Pages go in the pages module, templates for
