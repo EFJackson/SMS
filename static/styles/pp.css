@@ -1,0 +1,68 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300);
+@font-face {
+    font-family: Pagella;
+    src: url('/fonts/texgyrepagella-regular.otf');
+}
+body {
+    font-family: Ubuntu, sans-serif;
+    max-width: 600px;
+    text-align: justify;
+    font-weight: 100;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input {
+    font-family: Ubuntu, sans-serif;
+}
+
+small {
+    font-size: xx-small;
+    color: #999;
+}
+
+.input-append input{
+    position: absolute;
+}
+
+select{
+    font-family: Ubuntu, sans-serif;
+    width: 10em;
+}
+
+.uneditable-input{
+    width: 13em !important;
+}
+
+.pagella{
+    font-family: Pagella, serif;
+}
+
+.notlink{
+    color:#333;
+}
+
+.stuff{
+    clear: both;
+}
+
+.hesaid{
+    float: center;
+    width: 45%;
+    max-width: 45%;
+}
+
+.itmeans{
+    float: center;
+    width: 45%;
+    max-width: 45%;
+}
+
+.end{
+    clear: both;
+    text-align: center;
+}
+
+.end a{
+    padding-left: 1em;
+}

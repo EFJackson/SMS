@@ -1,0 +1,25 @@
+-inherit base.slim
+-block title
+    | stuffindex - add stuff
+-block content
+    .w1of1.clearfix
+        -if user
+            form method="POST"
+                .w1of2.col-left
+                    .inner
+                        h2.h
+                            label for="he_said"
+                                | They say
+                        textarea.neat-big.align-right name="he_said" id="he_said"
+                .w1of2.align-right
+                    .inner
+                        h2.h
+                            label for="it_means"
+                                | It means
+                        textarea.neat-big name="it_means" id="it_means"
+                p.align-center
+                    input.color1-texturehov.inner type="submit" value="Add"
+        -else
+            .align-center
+                p | Log in with facebook to add some stuff of your own.
+                <fb:login-button show-faces="false" width="200" max-rows="1"></fb:login-button>

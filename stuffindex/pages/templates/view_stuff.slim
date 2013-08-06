@@ -1,0 +1,15 @@
+-inherit base.slim
+-block title
+    | stuffindex - add stuff
+-block content
+    .w1of1.clearfix
+        .w1of2
+            .inner
+                h2.h They say
+                | ${stuff.he_said}
+                h2.h It means
+                | ${stuff.it_means}
+        .w1of2
+            .inner
+                h2.h You say
+                .fb-comments data-href=current_url data-width="470" data-num-posts="10"
