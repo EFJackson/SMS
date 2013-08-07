@@ -1,11 +1,11 @@
 from webapp2 import uri_for
 
-from stealmystuff.pages import BaseHandler
-from stealmystuff.application import application as app
+from stuffindex.pages import BaseHandler
+from stuffindex.application import application as app
 
-from stealmystuff.utils import redirect, render
+from stuffindex.utils import redirect, render
 
-from stealmystuff.models.stuff import stuff
+from stuffindex.models.stuff import stuff
 
 
 @app.route('/', 'index')

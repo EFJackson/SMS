@@ -2,7 +2,7 @@ import webapp2
 import logging
 from webapp2_extras.routes import RedirectRoute
 
-from markdown2 import markdown)
+from markdown2 import markdown
 
 
 import html5lib

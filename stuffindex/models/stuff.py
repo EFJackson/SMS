@@ -1,4 +1,4 @@
-from stealmystuff.models import model
+from stuffindex.models import model
 
 
 class stuff(model()):

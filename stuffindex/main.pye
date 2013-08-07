@@ -1,3 +1,0 @@
-from bollocksindex import utils
-from bollocksindex.application import application
-from bollocksindex.pages import pages
