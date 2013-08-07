@@ -1,58 +1,38 @@
-doctype 5
-html
-    head
-        meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
-        meta(name="viewport" content="width=device-width")
-        title
-            - block title
-        link(rel="stylesheet" type="text/css" href="/static/css/normalize.min.css")
-        link(rel="stylesheet" type="text/css" href="/static/css/main.css")right
-        link(rel="stylesheet" type="text/css" href="/static/css/font-awesome.min.css")
-        link(href="http://fonts.googleapis.com/css?family=Questrial|Lobster" rel="stylesheet" type='text/css')
 
-        script src="/static/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"
-    body
-        #fb-root
-        header.w1of1.clearfix
-            nav.w1of1.color3-bg.clearfix
-                ul.wrapper
-                    li.left
-                        a href=uri_for("add_stuff") 
-                            i.icon-plus-sign
-                            Add your own stuff! 
-                    li.right
-                        a href="https://bitbucket.org/KitB/stuffindex"  
-                            Help make this site!
-                            i.icon-code-fork
-            a href="/"
-                h1 
-                    span.over The
-                    Bollocks 
-                    span.undr Index
-        div.wrapper
-            - block content
+<!--http://hacks.youngrewiredstate.org/events/YRS2013
+	http://goo.gl/uRd2hN
+ -->
 
-        script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"
 
-        script type="text/javascript" src="/static/js/main.js"
-        script type="text/javascript"
-            // Additional JS functions here
-            window.fbAsyncInit = function() {
-                FB.init({
-                appId      : '544654668920779', // App ID
-                channelUrl : '//${request.host}/static/fbchannel.html',
-                status     : true, // check login status
-                cookie     : true, // enable cookies to allow the server to access the session
-                xfbml      : true  // parse XFBML
-                });
+	head
+		title Stuff Index
+		meta http-equiv="Content-Style-Type" content="text/css"
+		link href='http://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'
+		link rel="stylesheet" href="style.css" type="text/css"
+		
+		script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAeGV6AxwkBZ6-Vjh3KyDeTef83y4R6AUQ&sensor=false"
 
-                // Additional init code here
 
-            };
+		script
+			function initialize()
+			{
+				var mapProp = {
+				center:new google.maps.LatLng(51.508742,-0.120850),
+				zoom:6,
+				mapTypeId:google.maps.MapTypeId.ROADMAP
+			};
+			var map=new google.maps.Map(document.getElementById("googleMap")
+			,mapProp);
+			}
 
-            // Load the SDK asynchronously
-            (function(d){
-                if (d.getElementById(id)) {return;}
-                js = d.createElement('script'); js.id = id; js.async = true;
-                ref.parentNode.insertBefore(js, ref);
-            }(document));
+			google.maps.event.addDomListener(window, 'load', initialize);
+
+	body align='center' style="overflow: hidden" scrolling="no"
+		div id='body' align='left'
+			div id='header'
+				h1 b Stuff Index
+			div id='leftBar'
+				div id='selectBox'
+					div id='optionsBar'
+						div id='optionButton' img src='img\Categories\Technology.png' height='60px' width='60px'
+				div id='searchBox'

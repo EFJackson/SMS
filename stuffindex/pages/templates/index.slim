@@ -1,15 +1,6 @@
--inherit base.slim
--block title
-    | The Bollocks Index
--block content
-    - for stuff in reversed(stuffes)
-        .w1of1.stuff.clearfix
-            a href=uri_for('view_stuff', stuff_id=stuff._id)
-                .w1of2.col-left
-                    .inner
-                        h2.h They say
-                        | ${stuff.he_said}
-                .w1of2.col-right
-                    .inner
-                        h2.h It means
-                        | ${stuff.it_means}
+span
+	div id='main'
+		div id='title'
+			h2 Title
+		p lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+		div id="googleMap" style="width:100%; height: 11em;"
