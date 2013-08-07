@@ -6,12 +6,11 @@ html
         title
             - block title
         link(rel="stylesheet" type="text/css" href="/static/css/normalize.min.css")
-        link(rel="stylesheet" type="text/css" href="/static/css/main.css")
+        link(rel="stylesheet" type="text/css" href="/static/css/main.css")right
         link(rel="stylesheet" type="text/css" href="/static/css/font-awesome.min.css")
         link(href="http://fonts.googleapis.com/css?family=Questrial|Lobster" rel="stylesheet" type='text/css')
 
         script src="/static/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"
-
     body
         #fb-root
         header.w1of1.clearfix
@@ -53,9 +52,7 @@ html
 
             // Load the SDK asynchronously
             (function(d){
-                var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
                 if (d.getElementById(id)) {return;}
                 js = d.createElement('script'); js.id = id; js.async = true;
-                js.src = "//connect.facebook.net/en_GB/all.js";
                 ref.parentNode.insertBefore(js, ref);
             }(document));

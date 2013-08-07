@@ -1,0 +1,75 @@
+#body {
+	width: 98.75%;
+	background-color: #999999;
+	text-align: left;
+	height: 95%;
+	position: fixed;
+}
+
+h1 {
+	font-family: 'Fauna One', serif;
+	text-align: left;
+	font-size: 40px;
+	color: #EEEEEE;
+	margin: 10px;
+	font-size: 25px;
+	text-shadow: 2px 1px 5px #000000;
+}
+
+h2 {
+	font-family: 'Verdana', serif;
+	text-align: left;
+	font-size: 36;
+}
+
+body {
+	background-color: #666666;
+}
+
+#header {
+	background-color: #222233;
+	padding: 1px;
+}
+
+#selectBox {
+	width: 400px;
+	height: 50%;
+	background-color: #DDDDDD;
+}
+
+#searchBox {
+	width: 400px;
+	height: 50%;
+	background-color: #CCCCCC;
+}
+
+#main {
+	background-color: #FFFFFF;
+	height: 100%;
+	margin-bottom: 5px;
+	width: 100%;
+	position: relative;
+	padding-top: 1px;
+}
+
+#leftBar {
+	height: 100%;
+	width: 400px;
+	float: left;
+}
+
+#googleMap {
+	float: bottom;
+	position: absolute;
+	bottom: 29;
+}
+
+span {
+    display: block;
+    overflow: hidden;
+}
+
+p {
+	font-family: Verdana, serif;
+	font-size:
+}
