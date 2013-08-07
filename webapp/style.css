@@ -20,6 +20,7 @@ h2 {
 	font-family: 'Verdana', serif;
 	text-align: left;
 	font-size: 36;
+	margin-left: 1em;
 }
 
 body {
@@ -64,6 +65,12 @@ body {
 	bottom: 29;
 }
 
+#optionsBar {
+	background-color: #999999;
+	width: inherits;
+	padding: 5px;
+}
+
 span {
     display: block;
     overflow: hidden;
@@ -71,5 +78,5 @@ span {
 
 p {
 	font-family: Verdana, serif;
-	font-size:
+	margin-left: 1em;
 }
