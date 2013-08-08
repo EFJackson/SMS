@@ -10,4 +10,6 @@ static = StaticURLParser("./")
 app = Cascade([application, static])
 
 if __name__ == "__main__":
+    print "blah"
     httpserver.serve(app, host="", port="8080")
+    print "blah blah"

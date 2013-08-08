@@ -66,14 +66,15 @@ body {
 
 #optionsBar {
 	background-color: #999999;
-	height: 60px;
+	height: 40px;
 	list-style: none;
 	padding-left: 0;
+	padding-top: 0;
 }
 
 #optionButton {
 	float: left;
-	margin-left: 10px;
+	margin: 5px;
 }
 
 span {

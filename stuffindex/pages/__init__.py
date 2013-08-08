@@ -23,7 +23,8 @@ class BaseHandler(webapp2.RequestHandler):
                                'user': self.user,
                                'pretty': pprint.pformat,
                                }
-        if self.user is not None:            self.profile = graph.get_object("me")
+        if self.user is not None:            
+            self.profile = graph.get_object("me")
             self.render_globals['profile'] = self.profile
 
         try:
