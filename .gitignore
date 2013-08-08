@@ -35,4 +35,6 @@ nosetests.xml
 .project
 .pydevproject
 
-bollocksindex.env
+*.env
+*.venv
+*Thumbs.db
