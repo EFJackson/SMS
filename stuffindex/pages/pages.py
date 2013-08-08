@@ -11,7 +11,7 @@ from stuffindex.models.stuff import stuff
 @app.route('/', 'index')
 class Index(BaseHandler):
     def get(self):
-        return self.render('index.slim', stuffes=stuff.get_all())
+        return self.render('index.html', stuffes=stuff.get_all())
 
 
 @app.route('/add_stuff', 'add_stuff')
