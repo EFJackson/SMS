@@ -36,4 +36,5 @@ nosetests.xml
 .pydevproject
 
 *.env
+*.venv
 *Thumbs.db
