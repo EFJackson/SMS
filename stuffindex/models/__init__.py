@@ -1,9 +1,11 @@
 import pymongo
+import gridfs
 from bson.objectid import ObjectId
 
 client = pymongo.MongoClient()
 db = client.stuffindex
-collection = db.stuff
+
+gfs = gridfs.GridFS(db, 'img_fs')
 
 
 def model(host='localhost', port=27017, database='stuffindex', collection='stuff'):
