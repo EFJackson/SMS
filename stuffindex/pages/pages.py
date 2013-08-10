@@ -1,13 +1,9 @@
-from webapp2 import uri_for
-
 import time
-
-import gridfs
 
 from stuffindex.pages import BaseHandler
 from stuffindex.application import application as app
 
-from stuffindex.utils import redirect, render
+from stuffindex.utils import stuffes_to_json
 
 from stuffindex.models.stuff import Stuff
 from stuffindex.models import gfs
@@ -33,6 +29,7 @@ class AddStuff(BaseHandler):
         stuff = Stuff(image_file_id, (x_coord, y_coord), date, category)
         print stuff.push()
 
+
 @app.route('/img/<stuff_id>', 'view_image')
 class ViewImage(BaseHandler):
     def get(self, stuff_id):
@@ -40,3 +37,13 @@ class ViewImage(BaseHandler):
         img = gfs.get(stuff.image).read()
         self.response.content_type = "image/jpg"
         self.response.write(img)
+
+
+@app.route('/api/list_stuff', 'api_list_stuff')
+class ListStuff(BaseHandler):
+    def get(self):
+        self.response.content_type = 'application/json'
+        x_coord = self.request.GET.get('x_coord', 0)
+        y_coord = self.request.GET.get('y_coord', 0)
+        stuffes = Stuff.get_near((x_coord, y_coord), 100)
+        self.response.write(stuffes_to_json(stuffes))

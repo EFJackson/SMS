@@ -1,5 +1,7 @@
 import webapp2
 import logging
+import json
+
 from webapp2_extras.routes import RedirectRoute
 
 from markdown2 import markdown
@@ -66,3 +68,12 @@ def clean_html(buf):
 
 def render(untrusted_input):
     return markdown(clean_html(untrusted_input))
+
+
+def stuffes_to_json(stuffes):
+    def stuff_data_filter(stuff):
+        d = stuff.data
+        d['image'] = str(d['image'])
+        d['_id'] = str(d['_id'])
+        return d
+    return json.dumps([stuff_data_filter(s) for s in stuffes])
