@@ -17,6 +17,9 @@ class Index(BaseHandler):
 
 @app.route('/add_stuff', 'add_stuff')
 class AddStuff(BaseHandler):
+    def get(self):
+        return self.render('add_stuff_form.html')
+
     def post(self):
         print self.request.POST
         x_coord = self.request.POST.get('x_coord', 0)
@@ -42,8 +45,8 @@ class ViewImage(BaseHandler):
 @app.route('/api/list_stuff', 'api_list_stuff')
 class ListStuff(BaseHandler):
     def get(self):
-        self.response.content_type = 'application/json'
         x_coord = self.request.GET.get('x_coord', 0)
         y_coord = self.request.GET.get('y_coord', 0)
         stuffes = Stuff.get_near((x_coord, y_coord), 100)
+        self.response.content_type = 'application/json'
         self.response.write(stuffes_to_json(stuffes))
