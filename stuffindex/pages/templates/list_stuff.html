@@ -1,0 +1,8 @@
+<%inherit file="base.html"/>
+<%block name="content">
+% for stuff in stuffes:
+    <p>
+    <img src=/img/${stuff._id} width="200"/>
+    </p>
+% endfor
+</%block>
