@@ -4,7 +4,7 @@ Every year a special time comes around, thousands of students move into thousand
 ## Hacking
 Models go in the models module. Pages go in the pages module, templates for
 pages go in the templates directory inside the pages directory and are made
-using [Plim](https://plim.readthedocs.org/en/latest/en/nutshell.html).
+using Mako.
 
 The existing code should be readable enough to figure out how to write your own.
 Except for the templates. They can be a bit dense. Read the docs.
