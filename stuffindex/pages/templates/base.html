@@ -3,8 +3,8 @@
     <title>Stuff Index</title>
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <link href='http://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="style.css" type="text/css" />
-	<script src="mapsinit.js"></script>
+    <link rel="stylesheet" href="static/css/style.css" type="text/css"/>
+	<script src="static/js/mapsinit.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAeGV6AxwkBZ6-Vjh3KyDeTef83y4R6AUQ&sensor=false"></script>
 </head>
 
@@ -16,10 +16,13 @@
         <div id='leftBar'>
             <div id='selectBox'>
                 <div id='optionsBar'>
-                    <div id='optionButton' img src='img\Categories\Technology.png' height='60px' width='60px'>
-                    </div>
+                    <div id='optionButton1'><img src="static\img\Categories\Technology.png" height='60px' width='60px'></div>
+					<div id='optionButton2'><img src="static\img\Categories\Appliances.png" height='60px' width='60px'></div>
+					<div id='optionButton3'><img src="static\img\Categories\Furniture.png" height='60px' width='60px'></div>
+					<div id='optionButton4'><img src="static\img\Categories\Miscellaneous.png" height='60px' width='60px'></div>
                 </div>
             </div>
+			<div id='
             <div id='searchBox'></div>
         </div>
         <%block name="content"/>

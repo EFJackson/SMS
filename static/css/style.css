@@ -66,15 +66,28 @@ body {
 
 #optionsBar {
 	background-color: #999999;
-	height: 40px;
 	list-style: none;
-	padding-left: 0;
-	padding-top: 0;
+	height: 4.6em;
 }
 
-#optionButton {
+#optionButton1 {
 	float: left;
-	margin: 5px;
+	margin: 0.375em;
+}
+
+#optionButton2 {
+	float: left;
+	margin: 0.375em;
+}
+
+#optionButton3 {
+	float: left;
+	margin: 0.375em;
+}
+
+#optionButton4 {
+	float: left;
+	margin: 0.375em;
 }
 
 span {
