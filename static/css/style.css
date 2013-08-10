@@ -48,7 +48,7 @@ body {
 
 #searchBox {
 	width: 400px;
-	height: 50%;
+	height: 45%;
 	background-color: #CCCCCC;
 }
 
@@ -65,12 +65,6 @@ body {
 	height: 100%;
 	width: 290px;
 	float: left;
-}
-
-#googleMap {
-	
-	width: 50%;
-	height: 70%;
 }
 
 #optionsBar {
@@ -120,9 +114,19 @@ li {
 }
 
 #dropDown1 {
+	background-color: #FFFFFF;
+	border: solid 1px black;
+	padding: 3px;
+	display: none;
+}
+
+#dropDown2 {
+	background-color: #FFFFFF;
+	border: solid 1px black;
+	padding: 3px;
 	display: none;
 }
 
 #optionComp {
-	
+	margin-top: 5px;
 }
