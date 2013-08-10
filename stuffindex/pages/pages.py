@@ -16,7 +16,7 @@ from stuffindex.models import gfs
 @app.route('/', 'index')
 class Index(BaseHandler):
     def get(self):
-        return self.render('index.html', stuffes=stuff.get_all())
+        return self.render('index.html', stuffes=Stuff.get_all())
 
 
 @app.route('/add_stuff', 'add_stuff')

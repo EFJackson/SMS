@@ -66,15 +66,24 @@ body {
 
 #optionsBar {
 	background-color: #999999;
-	height: 40px;
 	list-style: none;
-	padding-left: 0;
-	padding-top: 0;
+	height: 4.6em;
 }
 
-#optionButton {
+#optionTech {
 	float: left;
-	margin: 5px;
+}
+
+#optionAppl {
+	float: left;
+}
+
+#optionFurn {
+	float: left;
+}
+
+#optionMisc {
+	float: left;
 }
 
 span {
@@ -85,4 +94,18 @@ span {
 p {
 	font-family: Verdana, serif;
 	margin-left: 1em;
+}
+
+ul {
+	list-style: none;
+	display: block;
+	margin-left: 0em;
+}
+
+li {
+	margin-left: auto;
+}
+
+#dropDown1 {
+	display: none;
 }
