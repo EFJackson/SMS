@@ -1,10 +1,10 @@
 <%inherit file="base.html"/>
 <%block name="content">
 <form action="#" method="POST" enctype="multipart/form-data">
-    <input type="text" name="x_coord" id="x_coord" />
-    <input type="text" name="y_coord" id="y_coord" />
-    <input type="text" name="category" id="category" />
-    <input type="file" name="img" id="img">
-    <input type="submit" name="submit" value="Submit">
+    <p><label for="x_coord">Latitude</label><input type="text" name="x_coord" id="x_coord" /></p>
+    <p><label for="y_coord">Longitude</label><input type="text" name="y_coord" id="y_coord" /></p>
+    <p><label for="category">Category</label><input type="text" name="category" id="category" /></p>
+    <p><label for="img">Photo (jpg only please)</label><input type="file" name="img" id="img"></p>
+    <p></label><input type="submit" name="submit" value="Submit"></p>
 </form>
 </%block>
