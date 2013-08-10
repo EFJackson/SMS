@@ -7,7 +7,6 @@
 	<script src="static/js/mapsinit.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAeGV6AxwkBZ6-Vjh3KyDeTef83y4R6AUQ&sensor=false"></script>
 	<script src="static/js/menu-animation.js"></script>
-	<script src="static/js/geolocation.js"></script>
 </head>
 
 <body align='center'>
@@ -22,13 +21,20 @@
                     <li id='optionTech' href="#">
 						<img src="static\img\Categories\Technology.png" height='60px' width='60px' onclick="javascript:showlayer('dropDown1')">
 						<ul id="dropDown1">
-							<li id="optionComp">Computers</li>
-							<li id="optionTele">Televisons</li>
-							<li id="optionMobi">Mobile Phones</li>
-							<li id="optionGame">Games Consoles</li>
+							<li>Computers</li>
+							<li>Televisons</li>
+							<li>Mobile Phones</li>
+							<li>Games Consoles</li>
 						</ul>
 					</li>
-					<li id='optionAppl'><img src="static\img\Categories\Appliances.png" height='60px' width='60px'></li>
+					<li id='optionAppl'><img src="static\img\Categories\Appliances.png" height='60px' width='60px' onclick="javascript:showlayer('dropDown2')">
+						<ul id="dropDown2">
+							<li>Dishwashers</li>
+							<li>Washing Machines</li>
+							<li>Refrigerators</li>
+							<li>Tumble Driers</li>
+						</ul>
+					</li>
 					<li id='optionFurn'><img src="static\img\Categories\Furniture.png" height='60px' width='60px'></li>
 					<li id='optionMisc'><img src="static\img\Categories\Miscellaneous.png" height='60px' width='60px'></li>
                 </ul>
