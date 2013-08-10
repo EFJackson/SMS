@@ -7,4 +7,29 @@
     <p><label for="img">Photo (jpg only please)</label><input type="file" name="img" id="img"></p>
     <p></label><input type="submit" name="submit" value="Submit"></p>
 </form>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+function success(position) {
+
+    console.log(position);
+    var lat = position.coords.latitude;
+    var lng = position.coords.longitude;
+
+    $('#y_coord').val(lat);
+    $('#x_coord').val(lng);
+
+}
+
+function error(msg) {
+    alert("wat.");
+
+}
+
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(success, error);
+} else {
+    error('not supported');
+}
+
+</script>
 </%block>
