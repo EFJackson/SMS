@@ -2,16 +2,18 @@
 <head>
     <title>Stuff Index</title>
     <meta http-equiv="Content-Style-Type" content="text/css" />
-    <link href='http://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'/>
     <link rel="stylesheet" href="static/css/style.css" type="text/css"/>
 	<script src="static/js/mapsinit.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAeGV6AxwkBZ6-Vjh3KyDeTef83y4R6AUQ&sensor=false"></script>
 	<script src="static/js/menu-animation.js"></script>
+	<script src="static/js/geolocation.js"></script>
 </head>
 
 <body align='center' style="overflow: hidden" scrolling="no">
     <div id='body' align='left'>
         <div id='header'>
+			<img id="icon" src="icon.jpg" width="40px" height="40px">
             <h1><b>Stuff Index</b></h1>
         </div>
         <div id='leftBar'>
@@ -33,7 +35,10 @@
             </div>
             <div id='searchBox'></div>
         </div>
-        <%block name="content"/>
+		<div id="main">
+			<%block name="content"/>
+		</div>
+
     </div>
 </body>
 </html>
