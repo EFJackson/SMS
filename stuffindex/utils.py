@@ -77,3 +77,10 @@ def stuffes_to_json(stuffes):
         d['_id'] = str(d['_id'])
         return d
     return json.dumps([stuff_data_filter(s) for s in stuffes])
+
+
+def distance_to_text(d):
+    if d < 1:
+        return "%.0fm" % (d * 1000)
+    else:
+        return "%.0fkm" % d

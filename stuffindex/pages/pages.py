@@ -29,7 +29,7 @@ class AddStuff(BaseHandler):
         img = self.request.POST.get('img', None).value
         image_file_id = gfs.put(img)
         print image_file_id
-        stuff = Stuff(image_file_id, (x_coord, y_coord), date, category)
+        stuff = Stuff(image_file_id, (y_coord, x_coord), date, category)
         print stuff.push()
 
 
@@ -42,17 +42,24 @@ class ViewImage(BaseHandler):
         self.response.write(img)
 
 
+@app.route('/choose_location', 'choose_location')
+class ChooseLocation(BaseHandler):
+    def get(self):
+        return self.render('map.html')
+
+
 @app.route('/list_stuff', 'list_stuff')
 class ListStuff(BaseHandler):
     def get(self):
         all_stuff = self.request.GET.get('all', False)
+        x_coord = self.request.GET.get('x_coord', 0)
+        y_coord = self.request.GET.get('y_coord', 0)
+        centre = (y_coord, x_coord)
         if all_stuff:
             stuffes = Stuff.get_all()
         else:
-            x_coord = self.request.GET.get('x_coord', 0)
-            y_coord = self.request.GET.get('y_coord', 0)
-            stuffes = Stuff.get_near((x_coord, y_coord), 100)
-        return self.render('list_stuff.html', stuffes=stuffes)
+            stuffes = Stuff.get_near(centre, 100)
+        return self.render('list_stuff.html', stuffes=stuffes, centre=centre)
 
 
 @app.route('/api/list_stuff', 'api_list_stuff')

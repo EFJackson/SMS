@@ -11,9 +11,12 @@ class Stuff(model()):
                      'date': date,
                      'category': category, }
 
+    def distance(self, location):
+        return distance.distance(self.point, location).km
+
     @property
     def point(self):
-        return point.Point(self.coordinates)
+        return point.Point(self.coordinates[1], self.coordinates[0])
 
     @classmethod
     def from_dict(cls, data):
@@ -26,7 +29,7 @@ class Stuff(model()):
         centre = point.Point(location)
         all_stuff = cls.get_all()
         for stuff in all_stuff:
-            d = distance.distance(stuff.point, centre).km
+            d = stuff.distance(centre)
             if d < range_km:
                 yield stuff
 

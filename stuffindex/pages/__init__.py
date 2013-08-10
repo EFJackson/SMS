@@ -5,6 +5,8 @@ from webapp2_extras import sessions
 
 from mako import lookup
 
+from stuffindex.utils import distance_to_text
+
 mako_render = lookup.TemplateLookup(directories=['stuffindex/pages/templates'])
 
 
@@ -17,6 +19,7 @@ class BaseHandler(webapp2.RequestHandler):
                                'current_page': self.request.path_qs,
                                'request': self.request,
                                'pretty': pprint.pformat,
+                               'dprint': distance_to_text,
                                }
 
         try:

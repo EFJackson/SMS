@@ -2,7 +2,8 @@
 <%block name="content">
 % for stuff in stuffes:
     <p>
-    <img src=/img/${stuff._id} width="200"/>
+    <img src=/img/${stuff._id} width="300"/>
+    ${dprint(stuff.distance(centre))} away
     </p>
 % endfor
 </%block>
