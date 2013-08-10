@@ -32,6 +32,9 @@ def model(host='localhost', port=27017, database='stuffindex', collection='stuff
         def save(self):
             self.collection.save(self.data)
 
+        def __str__(self):
+            return str(self.data)
+
         @classmethod
         def get_by_id(cls, _id):
             i = ObjectId(_id)
