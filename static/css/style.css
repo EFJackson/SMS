@@ -70,24 +70,20 @@ body {
 	height: 4.6em;
 }
 
-#optionButton1 {
+#optionTech {
 	float: left;
-	margin: 0.375em;
 }
 
-#optionButton2 {
+#optionAppl {
 	float: left;
-	margin: 0.375em;
 }
 
-#optionButton3 {
+#optionFurn {
 	float: left;
-	margin: 0.375em;
 }
 
-#optionButton4 {
+#optionMisc {
 	float: left;
-	margin: 0.375em;
 }
 
 span {
@@ -98,4 +94,18 @@ span {
 p {
 	font-family: Verdana, serif;
 	margin-left: 1em;
+}
+
+ul {
+	list-style: none;
+	display: block;
+	margin-left: 0em;
+}
+
+li {
+	margin-left: auto;
+}
+
+#dropDown1 {
+	display: none;
 }

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="static/css/style.css" type="text/css"/>
 	<script src="static/js/mapsinit.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAeGV6AxwkBZ6-Vjh3KyDeTef83y4R6AUQ&sensor=false"></script>
+	<script src="static/js/menu-animation.js"></script>
 </head>
 
 <body align='center' style="overflow: hidden" scrolling="no">
@@ -15,14 +16,21 @@
         </div>
         <div id='leftBar'>
             <div id='selectBox'>
-                <div id='optionsBar'>
-                    <div id='optionButton1'><img src="static\img\Categories\Technology.png" height='60px' width='60px'></div>
-					<div id='optionButton2'><img src="static\img\Categories\Appliances.png" height='60px' width='60px'></div>
-					<div id='optionButton3'><img src="static\img\Categories\Furniture.png" height='60px' width='60px'></div>
-					<div id='optionButton4'><img src="static\img\Categories\Miscellaneous.png" height='60px' width='60px'></div>
-                </div>
+                <ul id='optionsBar'>
+                    <li id='optionTech' href="#">
+						<img src="static\img\Categories\Technology.png" height='60px' width='60px' onclick="javascript:showlayer('dropDown1')">
+						<ul id="dropDown1">
+							<li id="optionComp">Computers</li>
+							<li id="optionTele">Televisons</li>
+							<li id="optionMobi">Mobile Phones</li>
+							<li id="optionGame">Games Consoles</li>
+						</ul>
+					</li>
+					<li id='optionAppl'><img src="static\img\Categories\Appliances.png" height='60px' width='60px'></li>
+					<li id='optionFurn'><img src="static\img\Categories\Furniture.png" height='60px' width='60px'></li>
+					<li id='optionMisc'><img src="static\img\Categories\Miscellaneous.png" height='60px' width='60px'></li>
+                </ul>
             </div>
-			<div id='
             <div id='searchBox'></div>
         </div>
         <%block name="content"/>
