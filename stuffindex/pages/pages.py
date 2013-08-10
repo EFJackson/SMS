@@ -45,9 +45,13 @@ class ViewImage(BaseHandler):
 @app.route('/list_stuff', 'list_stuff')
 class ListStuff(BaseHandler):
     def get(self):
-        x_coord = self.request.GET.get('x_coord', 0)
-        y_coord = self.request.GET.get('y_coord', 0)
-        stuffes = Stuff.get_near((x_coord, y_coord), 100)
+        all_stuff = self.request.GET.get('all', False)
+        if all_stuff:
+            stuffes = Stuff.get_all()
+        else:
+            x_coord = self.request.GET.get('x_coord', 0)
+            y_coord = self.request.GET.get('y_coord', 0)
+            stuffes = Stuff.get_near((x_coord, y_coord), 100)
         return self.render('list_stuff.html', stuffes=stuffes)
 
 
